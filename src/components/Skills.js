@@ -16,7 +16,7 @@ const SkillsSection = styled(motion.section)`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   max-width: 1200px;
-  margin: 0 auto;
+  
 `;
 
 const SkillsList = styled.div`
@@ -24,6 +24,7 @@ const SkillsList = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin: auto 10px
 
   @media (max-width: 768px) {
     gap: 10px;
