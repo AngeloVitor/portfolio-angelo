@@ -157,7 +157,7 @@ const data = {
     ],
   },
   contact: {
-    email: 'mohamed.hassan.bu@gmail.com',
+    email: 'angelovitor2010@gmail.com',
   },
 };
 
