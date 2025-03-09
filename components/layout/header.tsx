@@ -1,7 +1,7 @@
 'use client';
 import useHash from '@/hooks/use-hash';
 import { cn } from '@/lib/utils';
-import { File, FormInput, Home, LucideSend, User, Code } from 'lucide-react';
+import { File, Home, LucideSend, User, Code, Rocket } from 'lucide-react';
 import Link from 'next/link';
 
 const navItems = [
@@ -24,7 +24,13 @@ const navItems = [
     icon: File,
   },
   {
-    id: 3,
+    id: 4,
+    name: '_Technologies.ts',
+    path: '#technologies',
+    icon: Rocket,
+  },
+  {
+    id: 5,
     name: '_Contact-Me.ts',
     path: '#contact',
     icon: LucideSend,
