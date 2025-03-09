@@ -18,8 +18,13 @@ let snake: Snake = {
   cells: [],
 };
 
-export const startGame = (canvas: HTMLCanvasElement, onGameChange: () => void) => {
-  const context = canvas.getContext("2d")!;
+export const startGame = (
+  canvas: HTMLCanvasElement,
+  onGameChange: () => void,
+) => {
+  if (typeof window === 'undefined') return; // Guard clause for server-side rendering
+
+  const context = canvas.getContext('2d')!;
   const gridSize = 16;
   const gridWidth = Math.floor(canvas.width / gridSize);
   const gridHeight = Math.floor(canvas.height / gridSize);
@@ -80,13 +85,23 @@ export const startGame = (canvas: HTMLCanvasElement, onGameChange: () => void) =
     }
 
     // Draw food
-    context.fillStyle = "green";
-    context.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 1, gridSize - 1);
+    context.fillStyle = 'green';
+    context.fillRect(
+      food.x * gridSize,
+      food.y * gridSize,
+      gridSize - 1,
+      gridSize - 1,
+    );
 
     // Draw snake
-    context.fillStyle = "#EC1063";
+    context.fillStyle = '#EC1063';
     snake.cells.forEach(function (cell, index) {
-      context.fillRect(cell.x * gridSize, cell.y * gridSize, gridSize - 1, gridSize - 1);
+      context.fillRect(
+        cell.x * gridSize,
+        cell.y * gridSize,
+        gridSize - 1,
+        gridSize - 1,
+      );
 
       // Snake ate food
       if (cell.x === food.x && cell.y === food.y) {
@@ -109,25 +124,29 @@ export const startGame = (canvas: HTMLCanvasElement, onGameChange: () => void) =
     });
   }
 
-  document.addEventListener("keydown", keyPressed);
+  if (typeof document !== 'undefined') {
+    document.addEventListener('keydown', keyPressed);
+  }
 
   requestAnimationFrame(loop);
 };
 
 export const keyPressed = (e: KeyboardEvent) => {
+  if (typeof window === 'undefined') return; // Guard clause for server-side rendering
+
   e.preventDefault();
   console.log(e.key);
 
-  if (e.key === "ArrowLeft" && snake.dx === 0) {
+  if (e.key === 'ArrowLeft' && snake.dx === 0) {
     snake.dx = -1;
     snake.dy = 0;
-  } else if (e.key === "ArrowUp" && snake.dy === 0) {
+  } else if (e.key === 'ArrowUp' && snake.dy === 0) {
     snake.dy = -1;
     snake.dx = 0;
-  } else if (e.key === "ArrowRight" && snake.dx === 0) {
+  } else if (e.key === 'ArrowRight' && snake.dx === 0) {
     snake.dx = 1;
     snake.dy = 0;
-  } else if (e.key === "ArrowDown" && snake.dy === 0) {
+  } else if (e.key === 'ArrowDown' && snake.dy === 0) {
     snake.dy = 1;
     snake.dx = 0;
   }
