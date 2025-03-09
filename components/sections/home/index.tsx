@@ -21,7 +21,7 @@ export default function HomeSection() {
 
       <div className="space-y-7 text-center md:text-left md:text-xl">
         <div className="-space-y-1">
-          <p>Hi There 👋, I&apos;m</p>
+          <p>Hello World 👋, I&apos;m</p>
           <h1 className="relative text-6xl md:text-8xl">
             {/* blur background colors behind */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-20 bg-gradient-primary opacity-50 w-full h-10 blur-3xl" />

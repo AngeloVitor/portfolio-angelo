@@ -35,17 +35,35 @@ const data = {
     projects: [
       {
         id: 1,
-        title: 'Social Media App',
+        title: 'Ranek',
         description:
-          'A platform that allows users to connect, share, and interact with others. It provides a space for posting updates and engaging with content from friends, family, and communities around the world.',
-        image: '/projects-imgs/social.png',
-        githubLink: 'https://github.com/mo-hassann/social-app',
-        previewLink: 'https://social-m-app.vercel.app',
+          'Origamids Ranek Project: A complete e-commerce developed as part of the Origamid course. Using HTML, CSS, JavaScript, and Vue.js, this project covers everything from creating responsive design to implementing features such as user registration, shopping cart, and authentication.',
+        image: '/projects-imgs/Ranek.png',
+        githubLink: 'https://github.com/AngeloVitor/Ranek-Vue',
+        previewLink: 'https://ranekvuee-commerce.vercel.app',
+      },
+      {
+        id: 2,
+        title: 'Servitaxi',
+        description:
+          'Servitaxi-api is a web page created as a concept for the official website of Servitaxi, a taxi company that connects drivers with passengers. For more information, visit Servitaxi',
+        image: '/projects-imgs/servitaxi.png',
+        githubLink: 'https://github.com/AngeloVitor/servi-taxi_api',
+        previewLink: 'https://servi-taxi.vercel.app/',
+      },
+      {
+        id: 3,
+        title: 'BikCraft',
+        description:
+          'The Bikcraft Project from Origamid is a fictional website for a company that sells custom bicycles. It is used in courses to teach HTML, CSS, and JavaScript, focusing on responsive design, interactivity, and best web development practices. 🚴💻',
+        image: '/projects-imgs/bikecraft.png',
+        githubLink: 'https://github.com/AngeloVitor/Bikcraft',
+        previewLink: 'https://bikcraft-api.vercel.app/',
       },
     ],
   },
   technologies: {
-    skills: [
+    skills: [ 
       {
         id: 1,
         name: 'html',
