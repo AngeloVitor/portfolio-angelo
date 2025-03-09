@@ -4,7 +4,7 @@ const data = {
   home: {
     name: 'Ângelo Lemaire',
     description: 'The #Front_End developer who builds things for #The_Web.',
-    cvLink: 'asdf',
+    cvLink: '/docs/angelo-lemaire-cv.pdf',
   },
   sidebar: {
     links: [
@@ -63,7 +63,7 @@ const data = {
     ],
   },
   technologies: {
-    skills: [ 
+    skills: [
       {
         id: 1,
         name: 'html',
